@@ -8,10 +8,8 @@ import MomentsCards from "../../components/MomentsCards";
 import FooterWedding from "../../components/FooterWedding";
 import AskComponent from "../../components/AskComponent";
 import ContactWedding from "./ContactWedding";
-// import DividerComponent from "../../components/DividerComponent";
 import DressCode from "../../components/DressCode";
 import Placement from "../../components/Placement";
-// import ExecuteScrollComponent from "../../utils/ExecuteScrollComponent";
 import Program from "../../components/Program";
 const BasePage = () => {
 //  useEffect(() => {
@@ -102,11 +100,10 @@ const BasePage = () => {
 // }, []);
 
 
+
   return (
     <section className="base-page-container">
-    
-
-      <HeroWeddingCard />
+      <HeroWeddingCard  />
       <SecondSection/>
       <CounterTimer/>
       <MomentsCards/>
@@ -117,7 +114,6 @@ const BasePage = () => {
       <AskComponent/>
       <FooterWedding/>
       <AudioButton audiosrc="audio.mp3" />
-            {/* <ExecuteScrollComponent scrollRef={myTopRef} /> */}
 
     </section>
   );

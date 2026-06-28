@@ -3,7 +3,7 @@ import "../_dist/HeroWeddingCard.css";
 const HeroWeddingCard = () => {
   return (
     <header className="hero-wedding-container">
-      <video preload="metadata" autoPlay loop src="rania-vid.mp4" poster="/thumbs.png"/>
+      <video preload="metadata" autoPlay loop src="rania-vid.mp4" poster="/thumbs.png" />
   
       <div className="overlay-content">
         <h3>
