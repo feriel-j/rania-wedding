@@ -1,0 +1,43 @@
+{
+  "extends": "stylelint-config-standard-less",
+  "ignoreFiles": ["**/preset.less"],
+
+  "plugins": ["stylelint-order"],
+  "customSyntax": "postcss-less",
+  "rules": {
+    "selector-class-pattern": null,
+    "declaration-empty-line-before": null,
+
+    "order/properties-alphabetical-order": true,
+
+    "declaration-property-value-disallowed-list": {
+      "justify-content": [
+        "center",
+        "flex-start",
+        "flex-end",
+        "space-around",
+        "space-evenly"
+      ],
+      "align-items": [
+        "center",
+        "flex-start",
+        "flex-end",
+        "stretch",
+        "baseline"
+      ],
+      "display": ["flex", "block"],
+      "color": [
+        "red",
+        "blue",
+        "orange",
+        "black",
+        "green",
+        "purple",
+        "yellow",
+        "pink"
+      ]
+    },
+    "color-no-hex": true,
+    "color-function-notation": "legacy"
+  }
+}

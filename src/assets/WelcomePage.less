@@ -1,0 +1,70 @@
+@import url("./preset.less");
+
+.welcome-page-container {
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 1vh;
+  h1 {
+    font-family: @arabic;
+    font-size: 4vh;
+  text-align: center;
+  line-height: 2;
+  }
+  img {
+    max-width: 90vw;
+    width: 50vh;
+    height: fit-content;
+    border-radius: 7px;
+    box-shadow: @card-vertical-shadow;
+    animation: zoomIn 2s ease-in-out;
+    object-fit: cover;
+    &:hover{
+    
+      animation: zoomOut 2s ease-in-out;
+
+    }
+  }
+  .button-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+    button {
+      height: max-content;
+      padding: 0.5rem 1rem;
+      outline: none;
+      border: 2px solid @main-elements;
+      border-radius: 11px;
+      color: @main-elements;
+      background-color: @bg-main;
+      font-family: @arabica;
+      font-size: 3vh;
+      font-weight: 500;
+      cursor: pointer;
+      &:hover{
+        color: @bg-main;
+        background-color: @main-elements;
+       
+      }
+    }
+    .divider {
+      width: 7vw;
+      height: 3px;
+  background: linear-gradient(
+   90deg,
+    transparent 0%,
+    #210d02 25%,
+    #281302 50%,  /* gold */
+    #210d02 75%,
+    transparent 100%
+
+  
+  );
+
+    }
+  }
+}

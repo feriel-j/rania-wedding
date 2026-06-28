@@ -1,0 +1,76 @@
+@import url("./preset.less");
+
+.placement-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap:2rem;
+    line-height: 1.75;
+    text-align: center;
+      background-image: url("@{base_url}invitation-bg.png");
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+
+    h1{
+        font-family: @Aboreto;
+        font-size: 2.5rem;
+        font-weight: 900;
+        color:@dark-elements
+    }
+    p{
+        font-family: @arabica;
+        font-size: 2rem;
+        font-weight: 400;
+        text-shadow: @text-shadow;
+    }
+
+    .carte-lieu{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        border:2px solid @border-main;
+        box-shadow:@card-vertical-shadow ;
+        border-radius: 11px;
+       
+
+        img{
+            width: 100%;
+            border-radius: 11px 11px 0 0;
+            object-fit: cover;
+            border-bottom: 2px solid @border-main;
+
+        }
+        main{
+            padding-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;justify-content: center;
+            gap:2rem;
+
+            p{
+                color:@dark-elements;
+                font-weight: 700;
+                font-size: 2.5rem;
+                text-shadow: @text-shadow;
+            }
+        }
+        .placement-btn{
+            background-color: @main-elements;
+            border-color: @dark-elements;
+            color: @bg-main;
+
+            &:hover{
+                background-color: @bg-main;
+                color: @main-elements;
+                border-color: @main-elements;
+                scale: 1.01;
+            }
+        }
+    }
+}

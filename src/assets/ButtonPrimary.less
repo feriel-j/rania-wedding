@@ -1,0 +1,39 @@
+@import url("./preset.less");
+
+
+.hero-button{
+    background-color: @bg-main;
+    padding: .7rem 1rem;
+    outline: none;
+    border: none;
+    color: @dark-elements;
+    border: 2px solid @border-main;
+    border-radius: 7px;
+    // box-shadow: 0px 0px 10px rgb(0,0,0,0.1 );
+    font-family: @Montserrat;
+    font-size: 1.5rem;
+    font-weight: 500;
+    box-shadow: @card-dark-mode;
+
+    transition: transform 200ms, box-shadow 200ms;
+    cursor: pointer;
+
+    &:active , &:focus{
+        transform: translateY(2px) translateX(2px);
+    // box-shadow: 0px 0px 10px rgb(0,0,0,0.5 );
+    box-shadow: 0 0px 10px rgba(66, 232, 224, 0);
+    background-color: @dark-elements;
+    color: @border-main;
+
+
+    }
+
+      &:hover {
+      background-color: @main-elements;
+      border:2px solid @bg-main;
+      color: @bg-main;
+       
+
+
+    }
+}

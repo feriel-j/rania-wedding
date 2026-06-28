@@ -1,0 +1,27 @@
+@import url("./preset.less");
+
+.contact-input-container{
+    width: 100%;
+    background-color:@bg-transparency;
+    border-radius:3px;
+    border:1px solid @border-main;
+    height: fit-content;
+    padding: 1rem;
+    outline: none;
+    color:@bg-main;
+    font-family:@Montserrat;
+    font-size: 1.3rem;
+    line-height: 1.75;
+    letter-spacing:0.07em;
+    text-transform:lowercase;
+
+    &::placeholder{
+        color:@bg-main;
+        opacity: .7;
+        font-family:@Aboreto;
+        
+    }
+    &:focus{
+        border: 2px solid @border-main;
+    }
+}

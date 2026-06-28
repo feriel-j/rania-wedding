@@ -1,0 +1,97 @@
+@import url("./preset.less");
+
+.carousel-container {
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  
+  .slides-container {
+  position: relative;
+  width:100%;
+  
+  .slide-carousel {
+    // display: none;
+    height: 100%;
+    opacity: 0.5;
+    transition: opacity 0.25s linear, transform .25s linear ;
+    width: 100%;
+    
+    .slide-content {
+      min-height: 11rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+     .active-slide {
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    display: inline-block;;
+    opacity: 1; 
+    transform: translateX(0);
+    z-index: 2; 
+  }
+
+  .previous-slide {
+    display: inline;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    transform: translateX(-100%); /* Slide out to the left */
+    top: 0;
+    z-index: 1; 
+  }
+  
+  .next-slide {
+    display: inline;
+    opacity: 1;
+    transform: translateX(100%); /* Slide out to the right */
+    z-index: 1; 
+   
+  }
+  }
+}
+.arrows-container{
+    position: absolute;
+    right: 0;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dots-container {
+  bottom: 1.25vw;
+  cursor: pointer;
+  gap: 1.3rem;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  //common dots-------------------
+  .dot-carousel {
+    background-color: @main-blue;
+    border-radius: 11px;
+    // box-shadow: @esd_ref_card-dark-mode;
+    height: 5px;
+    width: 3.5rem;
+  }
+  //active dot-------------------
+  .active-dot {
+    // background: @esd_ref_dm-elements;
+    width: 3.7rem;
+    transition: width .05s ;
+  }
+}
+
+}

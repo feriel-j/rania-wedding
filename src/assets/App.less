@@ -1,0 +1,128 @@
+@import "./preset.less";
+
+
+@import url("./preset.less");
+//Initialization the html fontsize-----
+html {
+    font-size: 15px;
+    height: 100%;
+    // interpolate-size:allow-keywords
+  }
+html, body {
+  scroll-behavior: auto !important;
+}
+  
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    -ms-overflow-style: none; /* IE and Edge */
+    padding: 0;
+    scrollbar-width: none; /* Firefox */
+   
+  }
+
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+  padding: 0;
+}
+
+  //----------------------------------------------------------------------------------------------//
+  //scroll bar design ****************************
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  //----------------------------------------------------------------------------------------------//
+  //slection
+//   ::selection {
+//     // background-color: @esd_ref_lm-green;
+//     // color: @esd_ref_low-white;
+//   }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+ 
+
+  .App{
+    background-color: @bg-main;
+    color: @main-elements;
+    height:100%;
+    width: 100vw;
+   overflow-y: scroll;
+   overflow-x: hidden;
+
+   
+  }
+
+
+
+
+  @media (max-width: 1500px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 1400px) {
+    html {
+      font-size: 13px;
+    }
+  }
+  @media (max-width: 900px) {
+    html {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 800px) {
+    html {
+      font-size: 11px;
+    }
+  }
+  @media (max-width: 700px) {
+    html {
+      font-size: 10px;
+    }
+  }
+  @media (max-width: 600px) {
+    html {
+      font-size: 9px;
+    }
+  }
+  @media (max-width: 500px) {
+    html {
+      font-size: 8px;
+    }
+  }
+  @media (max-width: 450px) {
+    html {
+      font-size: 7px;
+    }
+  }
+  @media (max-width: 400px) {
+    html {
+      font-size: 6px;
+    }
+  }
+  @media (max-width: 350px) {
+    html {
+      font-size: 5.5px;
+    }
+  }
+  @media (max-width: 300px) {
+    html {
+      font-size: 5px;
+    }
+  }
+
+
+//   @media(prefers-reduced-motion:no-preference){
+//     h1,h2,h3,h4,h5,h6 
+//     ,p
+//     {
+//       animation: fade-out  linear ;
+//       animation-range: exit -100px;
+//       animation-timeline: view();
+//     }
+//   }
+
+  

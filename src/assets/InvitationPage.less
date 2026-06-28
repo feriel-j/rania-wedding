@@ -1,0 +1,21 @@
+@import url("./preset.less");
+
+.invitation-container {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: @bg-main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 50%;
+    height: fit-content;
+    box-shadow: @card-vertical-shadow;
+      animation: pulse 2s infinite;
+      cursor: pointer;
+    &:hover{
+        scale: 1.15;
+        transition: all 0.2s;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import url("./preset.less");
+
+.hero-wedding-container {
+  width: 100vw;
+  height: 100%;
+   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @bg-main;
+  outline: none;
+;
+
+
+
+video {
+  width: 100% ; 
+  outline: none;
+    background: @bg-main;
+    object-fit: cover;
+    /* IMPORTANT FIX MOBILE */
+ -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+  
+  .overlay-content {
+    z-index: 1;
+  
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  
+    position: absolute;
+    padding: 2rem;
+    background: rgba(241, 233, 233, 0.267);
+    border-radius: 11px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vh;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: @text-shadow;
+    box-shadow: @card-vertical-shadow;
+.divider{
+  width: 100%;
+  height: 4px;
+}
+    h1 {
+      font-family: @great;
+      font-weight: 900;
+      font-size: 5rem;
+      line-height: 1;
+    }
+    h3 {
+      font-family: @arabic;
+      font-size: 2rem;
+    }
+    h4 {
+      font-family: @Poppins;
+      font-size: 1.8rem;
+      color: @dark-elements;
+    }
+    h2 {
+      font-family: @agdasima;
+      font-size: 3rem;
+      color: @dark-elements;
+    }
+    .span {
+      color: @dark-elements;
+    }
+  }
+
+}
+@media (max-width: 900px) {
+  .hero-wedding-container {
+    width: 100dvw;
+    height: 100dvh;
+
+    video {
+      width: 100%;
+      height: 100dvh;
+    }
+  }
+}
+
+
+

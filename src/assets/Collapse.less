@@ -1,0 +1,53 @@
+@import url("./preset.less");
+.collapse-container{
+        width: 90%;
+        padding: 3rem;
+        border: 2px solid @border-main;
+        box-shadow: @card-vertical-shadow;
+        border-radius: 11px;
+        background-color: @bg-main;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        line-height: 1.75;
+        cursor: pointer;
+
+        .head{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .icon-container{
+                color: @dark-elements;
+                font-size: 1.5rem;
+                rotate:180deg;
+                                transition: all .2s ease-in-out;
+
+            }
+            .opened{
+                rotate: 0deg;
+            }
+            // .closed{
+            //     rotate: 180deg;
+            // }
+        }
+
+        p{
+            font-family: @Montserrat;
+            font-size: 1.5rem;
+            font-weight: 500;
+            
+        }
+        .reponse-p{
+            color:@dark-elements;
+            transition: opacity 1s ease-in-out;
+            
+        }
+        .opened-res{
+            opacity: 1;
+        }
+        .closed-res{
+            opacity: 0;
+        }
+    }
