@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 import "../../_dist/Basepage.css";
 import AudioButton from "../../components/buttons/AudioButton";
 import HeroWeddingCard from "../../components/HeroWeddingCard";
@@ -64,42 +64,42 @@ const BasePage = () => {
 //   };
 // }, []);
  
-useEffect(() => {
-  let stopped = false;
-  let animationId: number;
+// useEffect(() => {
+//   let stopped = false;
+//   let animationId: number;
 
-  const speed = 0.5;
-  const delay = 100;
+//   const speed = 0.5;
+//   const delay = 100;
 
-  let lastTime = 0;
+//   let lastTime = 0;
 
-  const step = (time: number) => {
-    if (stopped) return;
+//   const step = (time: number) => {
+//     if (stopped) return;
 
-    if (time - lastTime > delay) {
-      window.scrollBy(0, speed);
-      lastTime = time;
-    }
+//     if (time - lastTime > delay) {
+//       window.scrollBy(0, speed);
+//       lastTime = time;
+//     }
 
-    animationId = requestAnimationFrame(step);
-  };
+//     animationId = requestAnimationFrame(step);
+//   };
 
-  animationId = requestAnimationFrame(step);
+//   animationId = requestAnimationFrame(step);
 
-  const stop = () => {
-    stopped = true;
-    cancelAnimationFrame(animationId); // ✅ IMPORTANT
-  };
+//   const stop = () => {
+//     stopped = true;
+//     cancelAnimationFrame(animationId); // ✅ IMPORTANT
+//   };
 
-  window.addEventListener("wheel", stop);
-  window.addEventListener("touchstart", stop);
+//   window.addEventListener("wheel", stop);
+//   window.addEventListener("touchstart", stop);
 
-  return () => {
-    cancelAnimationFrame(animationId);
-    window.removeEventListener("wheel", stop);
-    window.removeEventListener("touchstart", stop);
-  };
-}, []);
+//   return () => {
+//     cancelAnimationFrame(animationId);
+//     window.removeEventListener("wheel", stop);
+//     window.removeEventListener("touchstart", stop);
+//   };
+// }, []);
 
 
   return (
