@@ -28,7 +28,7 @@ const CarousselWedding = () => {
       slidesPerView="auto">
       {images.map((img, index) => (
         <SwiperSlide key={index}>
-          <img src={img} />
+          <img src={img} loading="lazy" />
         </SwiperSlide>
       ))}
     </Swiper>
