@@ -1,6 +1,6 @@
 // import { Route, Routes } from "react-router-dom";
 import { Route, Routes } from "react-router";
-import "./_dist/App.css";
+import "./_dist/App.css"
 
 import InvitationPage from "./domains/pages/InvitationPage";
 import WelcomePage from "./domains/pages/WelcomePage";
