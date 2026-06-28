@@ -1,35 +1,37 @@
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from "react-responsive-carousel";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay, EffectCards } from "swiper/modules";
+import "../_dist/CarousselWedding.css";
+
 import "swiper/css";
+import "swiper/css/effect-cards";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 const CarousselWedding = () => {
-  // const images = [
-  //   "/images/invitation.jpg",
-  //   "/images/municipalite.jpg",
-  //   "/images/dress.png",
-  //   "/images/logorania.png",
-  // ];
+  const images = [
+    "/images/image1.png",
+    "/images/image2.png",
+    "/images/image3.png",
+    "/images/image4.png",
+    "/images/image5.png",
+  ];
 
   return (
-   <Swiper>
-      <SwiperSlide>
-        <img src="/photo1.jpg" />
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <img src="/photo2.jpg" />
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <img src="/photo3.jpg" />
-      </SwiperSlide>
+    <Swiper
+      modules={[Autoplay, EffectCards, Navigation, Pagination]}
+      autoplay={{ delay: 3000 }}
+      loop={true}
+      //  navigation={true}
+      pagination={{ clickable: true }}
+      effect="cards"
+      grabCursor={true}
+      centeredSlides={true}
+      slidesPerView="auto">
+      {images.map((img, index) => (
+        <SwiperSlide key={index}>
+          <img src={img} />
+        </SwiperSlide>
+      ))}
     </Swiper>
-
-    //  <Carousel autoPlay>
-    //   <div><img src="/images/invitation.jpg" /></div>
-    //   <div><img src="/images/logorania.png" /></div>
-    //   <div><img src="/images/dress.png" /></div>
-    // </Carousel>
   );
 };
 
