@@ -830,7 +830,6 @@
 }
 .swiper .swiper-wrapper .swiper-slide {
   border-radius: 16px;
-  box-shadow: -3px 5px 11px rgba(131, 166, 193, 0.744);
 }
 .swiper img {
   object-fit: cover;
@@ -838,6 +837,7 @@
   height: 100%;
   border-radius: 16px;
   transition: transform 0.3s ease;
+  box-shadow: -3px 5px 11px rgba(131, 166, 193, 0.744);
 }
 .swiper .swiper-pagination-bullet-active {
   background-color: #805106 !important;
