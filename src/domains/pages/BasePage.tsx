@@ -25,51 +25,51 @@ const BasePage = () => {
 //   return () => clearInterval(interval);
 // }, []);
 
-useEffect(() => {
-  let stopped = false;
-  let animationId: number;
+// useEffect(() => {
+//   let stopped = false;
+//   let animationId: number;
 
-  const speed = 0.5;
+//   const speed = 0.5;
 
-  const step = () => {
-    if (stopped) return;
+//   const step = () => {
+//     if (stopped) return;
 
-    const bottom =
-      window.innerHeight + window.scrollY >= document.body.scrollHeight;
+//     const bottom =
+//       window.innerHeight + window.scrollY >= document.body.scrollHeight;
 
-    if (bottom) {
-      window.scrollTo(0, 0);
-    } else {
-      window.scrollTo(0, window.scrollY + speed);
-    }
+//     if (bottom) {
+//       window.scrollTo(0, 0);
+//     } else {
+//       window.scrollTo(0, window.scrollY + speed);
+//     }
 
-    animationId = requestAnimationFrame(step);
-  };
+//     animationId = requestAnimationFrame(step);
+//   };
 
-  animationId = requestAnimationFrame(step);
+//   animationId = requestAnimationFrame(step);
 
-  const stop = () => {
-    stopped = true;
-    cancelAnimationFrame(animationId);
-  };
+//   const stop = () => {
+//     stopped = true;
+//     cancelAnimationFrame(animationId);
+//   };
 
-  // IMPORTANT: scroll event only is not enough → use multiple
-  window.addEventListener("wheel", stop, { passive: true });
-  window.addEventListener("touchstart", stop, { passive: true });
+//   // IMPORTANT: scroll event only is not enough → use multiple
+//   window.addEventListener("wheel", stop, { passive: true });
+//   window.addEventListener("touchstart", stop, { passive: true });
 
-  return () => {
-    cancelAnimationFrame(animationId);
-    window.removeEventListener("wheel", stop);
-    window.removeEventListener("touchstart", stop);
-  };
-}, []);
+//   return () => {
+//     cancelAnimationFrame(animationId);
+//     window.removeEventListener("wheel", stop);
+//     window.removeEventListener("touchstart", stop);
+//   };
+// }, []);
  
 useEffect(() => {
   let stopped = false;
   let animationId: number;
 
   const speed = 0.5;
-  const delay = 50;
+  const delay = 100;
 
   let lastTime = 0;
 
